@@ -1,0 +1,268 @@
+body {
+  background: #101010;
+}
+
+.container {
+  background: #000;
+  height: 90vh;
+  width: 90vw;
+  margin: 2rem auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 12vw 1fr;
+      grid-template-columns: 12vw 1fr;
+  -ms-grid-rows: 1fr 50vh 50vh;
+      grid-template-rows: 1fr 50vh 50vh;
+}
+
+.headers {
+  background: -webkit-gradient(linear, left bottom, right top, from(#100e0e), to(rgba(39, 35, 35, 0))), url(../img/avanger.jpg);
+  background: linear-gradient(to right top, #100e0e, rgba(39, 35, 35, 0)), url(../img/avanger.jpg);
+  grid-column: 2/-1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40vw 1fr;
+      grid-template-columns: 40vw 1fr;
+}
+
+.nav_bar {
+  background-color: #e60808;
+  grid-row: 1/-1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.img {
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.movie_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #f9f4f4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  z-index: 1000;
+  opacity: 2;
+  padding: 3rem 2rem;
+}
+
+.movie-overview {
+  color: #ebe0e0;
+  width: 40%;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.movie_title {
+  color: aliceblue;
+  opacity: 1;
+  font-size: 4rem;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+.date {
+  font-size: 1.5rem;
+}
+
+.movie-director {
+  font-size: 1.7rem;
+  font-family: sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.button {
+  color: white;
+  background-color: red;
+  width: 6vw;
+  padding: 0.3rem 0.7rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: crimson;
+  cursor: pointer;
+}
+
+.movie_lists {
+  background-color: black;
+  grid-column: 1/-1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.pic {
+  width: 100%;
+  height: 100%;
+}
+
+.pic:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  z-index: 1000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.info {
+  font-size: 1rem;
+  color: white;
+  position: absolute;
+  left: 40%;
+  top: 58%;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.mov {
+  position: relative;
+  height: 40vh;
+  width: 20vw;
+  padding: 2rem 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav_bar {
+  background-color: black;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.nav-list {
+  padding: 1.3rem 0.2rem;
+}
+
+.map {
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0.4rem 0.6rem;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 500;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #f31c1c 50%);
+  background-size: 340%;
+  -webkit-transition: all 0.5s cubic-bezier(0.5, 0, 0.75, 0);
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.75, 0);
+  display: inline-block;
+}
+
+.map:hover {
+  background-position: 100%;
+  color: #f7f6f6;
+}
+
+.arrowleft {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 2rem;
+  font-size: 2rem;
+  color: #ede4e4;
+}
+
+.arrowleft:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  cursor: pointer;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.arrowright {
+  padding: 2rem;
+  font-size: 2rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  justify-self: flex-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  color: aliceblue;
+}
+
+.arrowright:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  cursor: pointer;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.trending {
+  grid-column: 1/-1;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+.heading {
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  font-weight: 600;
+  color: whitesmoke;
+  text-shadow: 0 1rem 2rem red;
+  text-align: center;
+  padding: .3rem 2rem;
+}
+
+/*<img src="img/img1.jpg" class="pic"  >
+<span class="info">THor</span>
+
+  <a id="left" class="arrowleft">	&#8592;</a>
+        <a id="right" class="arrowright"> &#8594;</a>*/
+/*# sourceMappingURL=main.css.map */
