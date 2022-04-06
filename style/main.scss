@@ -1,5 +1,5 @@
 body {
-  background: rgb(16, 16, 16);
+  background: rgb(0, 0, 0);
 }
 
 .container {
@@ -8,8 +8,8 @@ body {
   width: 90vw;
   margin: 2rem auto;
   display: grid;
-  grid-template-columns: 12vw 1fr;
-  grid-template-rows: 1fr 50vh 50vh;
+  grid-template-columns: 12vw 1fr 10vw;
+  grid-template-rows: 1fr 50vh 50vh 40vh;
 }
 .headers {
   background: linear-gradient(
@@ -19,7 +19,7 @@ body {
     ),
     url(../img/avanger.jpg);
 
-  grid-column: 2/-1;
+  grid-column: 2/3;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -91,8 +91,8 @@ body {
 }
 
 .movie_lists {
-  background-color: rgb(0, 0, 0);
-  grid-column: 1/-1;
+background: linear-gradient(#000428 , #002e57);
+  grid-column: 2/3;
   grid-row: 2/3;
 
   display: flex;
@@ -119,8 +119,8 @@ body {
 }
 .mov {
   position: relative;
-  height: 40vh;
-  width: 20vw;
+  height: 30vh;
+  width: 13vw;
   padding: 2rem 1rem;
  
   align-items: center;
@@ -129,7 +129,7 @@ body {
 
 .nav_bar {
   background-color: rgb(0, 0, 0);
-  grid-row: 1/2;
+  grid-row: 1/-1;
   grid-column: 1/2;
 }
 .nav-list {
@@ -166,19 +166,21 @@ body {
   }
 }
 
-.arrowleft {
+.arrowright {
   justify-self: center;
   align-self: center;
   padding: 2rem;
   font-size: 2rem;
   color: rgb(237, 228, 228);
+  //background: #000;
+  grid-row: 2/3;
   &:hover {
     transform: scale(0.95);
     cursor: pointer;
     transition: 0.1s;
   }
 }
-.arrowright {
+.arrowleft {
   padding: 2rem;
   font-size: 2rem;
   justify-content: flex-end;
@@ -186,8 +188,11 @@ body {
   align-content: flex-end;
   justify-self: flex-start;
   align-self: center;
- order: 0;
+
+ justify-self: flex-end;
   color: aliceblue;
+  grid-column: 1/2;
+  grid-row: 2/3;
   &:hover {
     transform: scale(0.95);
     cursor: pointer;
@@ -196,8 +201,9 @@ body {
 }
 
 .trending {
-  grid-column: 1/-1;
+  grid-column: 2/3;
   grid-row: 3/4;
+  overflow: hidden;
 }
 .heading{
 
@@ -208,6 +214,103 @@ body {
 text-shadow: 0 1rem 2rem red;
 text-align: center;
 padding: .3rem 2rem;
+}
+.l{
+  grid-column: 1/2;
+  grid-row: 3/4;
+  justify-self: flex-end;
+}
+.r{
+  grid-column: 3/4;
+  grid-row: 3/4;
+  justify-self: flex-end;
+}
+.footers{
+   background: linear-gradient(
+  to right top,
+  rgb(16, 14, 14),
+  rgba(39, 35, 35, 0)
+),
+url(../img/the-avengers-9z918qw3fdqtk1j8.jpg);
+object-fit: cover;
+background-size: cover;
+//background-repeat: no-repeat;
+
+  grid-row: 4/-1;
+  grid-column: 1/-1;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+}
+
+.navi {
+  display: flex;
+  grid-column: 2/3;
+  //justify-self: center;
+//align-self: center;
+
+  &-list {
+    padding: 2rem;
+    list-style: none;
+  }
+
+  &-btn {
+    font-size: 20px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    color: rgb(212, 19, 19);
+    font-weight: bolder;
+    display: block;
+    text-decoration: none;
+    //margin: 1rem;
+
+    &:hover {
+      background: rgb(255, 2, 2);
+      color: rgb(211, 211, 211);
+      transform: rotate(5deg);
+      transform: scale(1.35) ;
+      //padding: .2rem .2rem;
+    }
+  }
+}
+.paragraph-f {
+  //justify-self: center;
+  //margin-left: 12rem;
+  display: block;
+  color: rgb(253, 250, 250);
+  font-size: 20px;
+
+  grid-row: 2/3;
+  grid-column: 2/3;
+  align-self: center;
+
+  @media only screen and (max-width: 971px) {
+    justify-self: flex-end;
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+}
+.search{
+ // justify-self: flex-end;
+  width: 20vw;
+//align-self: flex-start;
+justify-self: center;
+border-radius: 50px;
+
+border: none;
+border-style: none;
+text-decoration: none;
+text-transform: uppercase;
+outline: none;
+padding: .4rem .8rem;
+}
+.label{
+  padding-left: .6rem;
+  font-size: .8rem;
+  font-family: sans-serif;
+}
+.search-div{
+  margin: 0 auto;
 }
 /*<img src="img/img1.jpg" class="pic"  >
 <span class="info">THor</span>

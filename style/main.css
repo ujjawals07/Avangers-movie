@@ -1,5 +1,5 @@
 body {
-  background: #101010;
+  background: black;
 }
 
 .container {
@@ -9,16 +9,18 @@ body {
   margin: 2rem auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 12vw 1fr;
-      grid-template-columns: 12vw 1fr;
-  -ms-grid-rows: 1fr 50vh 50vh;
-      grid-template-rows: 1fr 50vh 50vh;
+  -ms-grid-columns: 12vw 1fr 10vw;
+      grid-template-columns: 12vw 1fr 10vw;
+  -ms-grid-rows: 1fr 50vh 50vh 40vh;
+      grid-template-rows: 1fr 50vh 50vh 40vh;
 }
 
 .headers {
   background: -webkit-gradient(linear, left bottom, right top, from(#100e0e), to(rgba(39, 35, 35, 0))), url(../img/avanger.jpg);
   background: linear-gradient(to right top, #100e0e, rgba(39, 35, 35, 0)), url(../img/avanger.jpg);
-  grid-column: 2/-1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 100;
@@ -108,8 +110,11 @@ body {
 }
 
 .movie_lists {
-  background-color: black;
-  grid-column: 1/-1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000428), to(#002e57));
+  background: linear-gradient(#000428, #002e57);
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
@@ -144,8 +149,8 @@ body {
 
 .mov {
   position: relative;
-  height: 40vh;
-  width: 20vw;
+  height: 30vh;
+  width: 13vw;
   padding: 2rem 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -154,9 +159,7 @@ body {
 
 .nav_bar {
   background-color: black;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
+  grid-row: 1/-1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -195,7 +198,7 @@ body {
   color: #f7f6f6;
 }
 
-.arrowleft {
+.arrowright {
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-flex-item-align: center;
@@ -204,9 +207,12 @@ body {
   padding: 2rem;
   font-size: 2rem;
   color: #ede4e4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
 }
 
-.arrowleft:hover {
+.arrowright:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
   cursor: pointer;
@@ -214,7 +220,7 @@ body {
   transition: 0.1s;
 }
 
-.arrowright {
+.arrowleft {
   padding: 2rem;
   font-size: 2rem;
   -webkit-box-pack: end;
@@ -229,13 +235,17 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  -webkit-box-ordinal-group: 1;
-      -ms-flex-order: 0;
-          order: 0;
+  justify-self: flex-end;
   color: aliceblue;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
 }
 
-.arrowright:hover {
+.arrowleft:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
   cursor: pointer;
@@ -244,10 +254,13 @@ body {
 }
 
 .trending {
-  grid-column: 1/-1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3/4;
+  overflow: hidden;
 }
 
 .heading {
@@ -258,6 +271,120 @@ body {
   text-shadow: 0 1rem 2rem red;
   text-align: center;
   padding: .3rem 2rem;
+}
+
+.l {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  justify-self: flex-end;
+}
+
+.r {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  justify-self: flex-end;
+}
+
+.footers {
+  background: -webkit-gradient(linear, left bottom, right top, from(#100e0e), to(rgba(39, 35, 35, 0))), url(../img/the-avengers-9z918qw3fdqtk1j8.jpg);
+  background: linear-gradient(to right top, #100e0e, rgba(39, 35, 35, 0)), url(../img/the-avengers-9z918qw3fdqtk1j8.jpg);
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  grid-row: 4/-1;
+  grid-column: 1/-1;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.navi-list {
+  padding: 2rem;
+  list-style: none;
+}
+
+.navi-btn {
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #d41313;
+  font-weight: bolder;
+  display: block;
+  text-decoration: none;
+}
+
+.navi-btn:hover {
+  background: #ff0202;
+  color: lightgray;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  -webkit-transform: scale(1.35);
+          transform: scale(1.35);
+}
+
+.paragraph-f {
+  display: block;
+  color: #fdfafa;
+  font-size: 20px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media only screen and (max-width: 971px) {
+  .paragraph-f {
+    justify-self: flex-end;
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+}
+
+.search {
+  width: 20vw;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border-radius: 50px;
+  border: none;
+  border-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: none;
+  padding: .4rem .8rem;
+}
+
+.label {
+  padding-left: .6rem;
+  font-size: .8rem;
+  font-family: sans-serif;
+}
+
+.search-div {
+  margin: 0 auto;
 }
 
 /*<img src="img/img1.jpg" class="pic"  >
