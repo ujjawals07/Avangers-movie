@@ -1,9 +1,14 @@
 body {
   background: black;
+  background: -webkit-gradient(linear, left bottom, right top, from(#100e0e), to(rgba(39, 35, 35, 0))), url(../img/the-avengers-9z918qw3fdqtk1j8.jpg);
+  background: linear-gradient(to right top, #100e0e, rgba(39, 35, 35, 0)), url(../img/the-avengers-9z918qw3fdqtk1j8.jpg);
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
 }
 
 .container {
-  background: #000;
+  background: black;
   height: 90vh;
   width: 90vw;
   margin: 2rem auto;
@@ -19,8 +24,8 @@ body {
   background: -webkit-gradient(linear, left bottom, right top, from(#100e0e), to(rgba(39, 35, 35, 0))), url(../img/avanger.jpg);
   background: linear-gradient(to right top, #100e0e, rgba(39, 35, 35, 0)), url(../img/avanger.jpg);
   -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 100;
@@ -151,15 +156,15 @@ body {
   position: relative;
   height: 30vh;
   width: 13vw;
-  padding: 2rem 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 
 .nav_bar {
-  background-color: black;
-  grid-row: 1/-1;
+  background-color: rgba(189, 59, 59, 0.47);
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -167,6 +172,8 @@ body {
 
 .nav-list {
   padding: 1.3rem 0.2rem;
+  text-decoration: none;
+  list-style: none;
 }
 
 .map {
@@ -186,6 +193,7 @@ body {
   text-decoration: none;
   text-transform: capitalize;
   font-weight: 500;
+  cursor: pointer;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #f31c1c 50%);
   background-size: 340%;
   -webkit-transition: all 0.5s cubic-bezier(0.5, 0, 0.75, 0);
@@ -206,7 +214,7 @@ body {
       align-self: center;
   padding: 2rem;
   font-size: 2rem;
-  color: #ede4e4;
+  color: #ef0a0a;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
@@ -236,7 +244,7 @@ body {
       -ms-grid-row-align: center;
       align-self: center;
   justify-self: flex-end;
-  color: aliceblue;
+  color: #f80606;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -261,6 +269,13 @@ body {
   -ms-grid-row-span: 1;
   grid-row: 3/4;
   overflow: hidden;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 2rem;
 }
 
 .heading {
@@ -294,8 +309,8 @@ body {
 }
 
 .footers {
-  background: -webkit-gradient(linear, left bottom, right top, from(#100e0e), to(rgba(39, 35, 35, 0))), url(../img/the-avengers-9z918qw3fdqtk1j8.jpg);
-  background: linear-gradient(to right top, #100e0e, rgba(39, 35, 35, 0)), url(../img/the-avengers-9z918qw3fdqtk1j8.jpg);
+  background: -webkit-gradient(linear, left bottom, right top, from(#100e0e), to(rgba(39, 35, 35, 0))), url(../img/footer.jpg);
+  background: linear-gradient(to right top, #100e0e, rgba(39, 35, 35, 0)), url(../img/footer.jpg);
   -o-object-fit: cover;
      object-fit: cover;
   background-size: cover;

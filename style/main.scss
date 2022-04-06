@@ -1,9 +1,17 @@
 body {
-  background: rgb(0, 0, 0);
+ background: rgb(0, 0, 0);
+  background: linear-gradient(
+    to right top,
+    rgb(16, 14, 14),
+    rgba(39, 35, 35, 0)
+  ),
+  url(../img/the-avengers-9z918qw3fdqtk1j8.jpg);
+  object-fit: cover;
+  background-size: cover;
 }
 
 .container {
-  background: #000;
+  background: rgb(0, 0, 0);
   height: 90vh;
   width: 90vw;
   margin: 2rem auto;
@@ -19,7 +27,7 @@ body {
     ),
     url(../img/avanger.jpg);
 
-  grid-column: 2/3;
+  grid-column: 2/4;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -121,19 +129,21 @@ background: linear-gradient(#000428 , #002e57);
   position: relative;
   height: 30vh;
   width: 13vw;
-  padding: 2rem 1rem;
- 
-  align-items: center;
+  padding-top: 3rem ;
+ padding-bottom: 1rem;
+ // align-items: center;
 }
 
 
 .nav_bar {
-  background-color: rgb(0, 0, 0);
-  grid-row: 1/-1;
+  background-color: rgba(189, 59, 59, 0.47);
+  grid-row: 1/2;
   grid-column: 1/2;
 }
 .nav-list {
   padding: 1.3rem 0.2rem;
+  text-decoration: none;
+  list-style: none;
 }
 .map {
   color: whitesmoke;
@@ -146,6 +156,7 @@ background: linear-gradient(#000428 , #002e57);
   text-decoration: none;
   text-transform: capitalize;
   font-weight: 500;
+  cursor: pointer;
   background-image: linear-gradient(
     120deg,
     transparent 0%,
@@ -171,7 +182,7 @@ background: linear-gradient(#000428 , #002e57);
   align-self: center;
   padding: 2rem;
   font-size: 2rem;
-  color: rgb(237, 228, 228);
+  color: rgb(239, 10, 10);
   //background: #000;
   grid-row: 2/3;
   &:hover {
@@ -190,7 +201,7 @@ background: linear-gradient(#000428 , #002e57);
   align-self: center;
 
  justify-self: flex-end;
-  color: aliceblue;
+  color: rgb(248, 6, 6);
   grid-column: 1/2;
   grid-row: 2/3;
   &:hover {
@@ -204,6 +215,10 @@ background: linear-gradient(#000428 , #002e57);
   grid-column: 2/3;
   grid-row: 3/4;
   overflow: hidden;
+}
+.list{
+  display: flex;
+  padding: 1rem 2rem;
 }
 .heading{
 
@@ -231,7 +246,7 @@ padding: .3rem 2rem;
   rgb(16, 14, 14),
   rgba(39, 35, 35, 0)
 ),
-url(../img/the-avengers-9z918qw3fdqtk1j8.jpg);
+url(../img/footer.jpg);
 object-fit: cover;
 background-size: cover;
 //background-repeat: no-repeat;
