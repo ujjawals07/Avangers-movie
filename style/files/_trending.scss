@@ -1,0 +1,51 @@
+.movie_lists {
+  background: linear-gradient(#000428, #002e57);
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+  display: flex;
+  overflow: hidden;
+}
+.pic {
+  width: 100%;
+  height: 100%;
+
+  &:hover + .info  {
+    transform: scale(1.1);
+    z-index: 1000;
+    //transition: 0.3s;
+    display: block;
+  }
+}
+.info {
+  font-size: 1rem;
+  color: rgb(6, 6, 6);
+  position: absolute;
+  left: 25%;
+  top: 57%;
+  font-size: 1rem;
+  font-family: sans-serif;
+  background-color: #df0000;
+  padding: 0.3rem 0.4rem;
+  opacity: 1;
+  display: none;
+text-transform: capitalize;
+}
+.mov {
+  position: relative;
+  height: 30vh;
+  width: 13vw;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+
+.trending-b {
+  position: absolute;
+  top: 83%;
+  left: 12%;
+  opacity: 1;
+  
+
+}
+
