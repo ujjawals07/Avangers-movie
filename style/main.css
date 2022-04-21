@@ -14,13 +14,11 @@
 }
 
 .pic {
-  width: 100%;
-  height: 100%;
+  height: 17rem;
+  width: 13rem;
 }
 
-.pic:hover + .info {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.pic:hover {
   z-index: 1000;
   display: block;
 }
@@ -55,6 +53,12 @@
   opacity: 1;
 }
 
+html {
+  font-size: 70%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   background: black;
   background: -webkit-gradient(linear, left bottom, right top, from(#100e0e), to(rgba(39, 35, 35, 0))), url(../img/the-avengers-9z918qw3fdqtk1j8.jpg);
@@ -73,8 +77,15 @@ body {
   display: grid;
   -ms-grid-columns: 12vw 1fr 10vw;
       grid-template-columns: 12vw 1fr 10vw;
-  -ms-grid-rows: 110vh 50vh 50vh 40vh;
-      grid-template-rows: 110vh 50vh 50vh 40vh;
+  -ms-grid-rows: 95vh 45vh 50vh 40vh;
+      grid-template-rows: 95vh 45vh 50vh 40vh;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    -ms-grid-rows: 70vh 50vh 50vh 40vh;
+        grid-template-rows: 70vh 50vh 50vh 40vh;
+  }
 }
 
 .headers {
@@ -386,40 +397,176 @@ body {
       align-self: center;
 }
 
-@media only screen and (max-width: 971px) {
-  .paragraph-f {
-    justify-self: flex-end;
-    margin-left: 0;
-    margin-top: 2rem;
+@media (max-width: 970px) {
+  .container {
+    -ms-grid-columns: 12vw 1fr 10vw;
+        grid-template-columns: 12vw 1fr 10vw;
+    -ms-grid-rows: 10vh 70vh 30vh 30vh 40vh;
+        grid-template-rows: 10vh 70vh 30vh 30vh 40vh;
+  }
+  .pic {
+    width: 10rem;
+    height: 15rem;
+  }
+  .nav_bar {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    grid-column: 1/-1;
+  }
+  .headers {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/5;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .trending {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  .trending-b {
+    top: 50%;
+  }
+  .l {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  .r {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  .movie_lists {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  .footers {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+  #left1 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  #right1 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  .nav-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 0 3rem;
   }
 }
 
-.search {
-  width: 20vw;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  border-radius: 50px;
-  border: none;
-  border-style: none;
-  text-decoration: none;
-  text-transform: uppercase;
-  outline: none;
-  padding: 0.4rem 0.8rem;
+@media (max-width: 821px) {
+  .container {
+    -ms-grid-rows: 10vh 70vh 20vh 20vh 230vh;
+        grid-template-rows: 10vh 70vh 20vh 20vh 230vh;
+  }
+  .button {
+    width: 7vw;
+  }
 }
 
-.label {
-  padding-left: 0.6rem;
-  font-size: 0.8rem;
-  font-family: sans-serif;
+@media (max-width: 750px) {
+  html {
+    font-size: 60%;
+  }
+  .container {
+    -ms-grid-rows: 10vh 55vh 30vh 30vh 30vh;
+        grid-template-rows: 10vh 55vh 30vh 30vh 30vh;
+  }
 }
 
-.search-div {
-  margin: 0 auto;
+@media (max-width: 650px) {
+  .container {
+    -ms-grid-rows: 10vh 55vh 25vh 25vh 30vh;
+        grid-template-rows: 10vh 55vh 25vh 25vh 30vh;
+  }
+  .pic {
+    width: 8rem;
+    height: 12rem;
+  }
+  .trending-b {
+    top: 47%;
+  }
 }
 
-/*<img src="img/img1.jpg" class="pic"  >
-<span class="info">THor</span>
+@media (max-width: 540px) {
+  .button {
+    width: 10vw;
+  }
+}
 
-  <a id="left" class="arrowleft">	&#8592;</a>
-        <a id="right" class="arrowright"> &#8594;</a>*/
+@media (max-width: 510px) {
+  html {
+    font-size: 55%;
+  }
+  .pic {
+    width: 8rem;
+    height: 14rem;
+  }
+  .container {
+    -ms-grid-rows: 7vh 39vh 20vh 20vh 20vh;
+        grid-template-rows: 7vh 39vh 20vh 20vh 20vh;
+  }
+  .movie-overview {
+    font-size: 0.9rem;
+    width: 85%;
+  }
+  .movie-director {
+    font-size: 1.1rem;
+  }
+  .movie_title {
+    font-size: 1.3rem;
+  }
+  .navi-btn {
+    font-size: 1rem;
+  }
+  .navi-p {
+    font-size: 1rem;
+  }
+  .button {
+    width: 7vw;
+    font-size: 0.6rem;
+  }
+  .date {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 280px) {
+  .container {
+    -ms-grid-rows: 7vh 60vh 20vh 20vh 10vh;
+        grid-template-rows: 7vh 60vh 20vh 20vh 10vh;
+  }
+  .pic {
+    height: 8rem;
+    width: 5rem;
+  }
+  .button {
+    width: 4vh;
+  }
+}
+
+@media (max-width: 912px) {
+  .container {
+    -ms-grid-rows: 7vh 60vh 20vh 20vh 30vh;
+        grid-template-rows: 7vh 60vh 20vh 20vh 30vh;
+  }
+}
 /*# sourceMappingURL=main.css.map */
